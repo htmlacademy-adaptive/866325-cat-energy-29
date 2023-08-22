@@ -56,7 +56,6 @@ img {
 
 .title-h2 {
   margin: 0;
-  text-align: left;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -215,23 +214,17 @@ img {
   display: block;
   width: 33px;
   height: 38px;
-  background-image: url("../img/icons/logo-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
 }
 @media (width >= 768px) {
   .header__logo {
     width: 60px;
     height: 50px;
-    background-image: url("../img/icons/logo-tablet.svg");
   }
 }
 @media (width >= 1440px) {
   .header__logo {
     width: 70px;
     height: 59px;
-    background-image: url("../img/icons/logo-desktop.svg");
   }
 }
 .header__logo[href]:hover {
@@ -695,15 +688,11 @@ img {
   flex: 1 0 302px;
   width: 100%;
   height: 302px;
-  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/content/slider-cat-mobile.jpg");
+  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), -webkit-image-set(url("../img/content/slider-cat-mobile.jpg") type("image/jpg") 1dppx, url("../img/content/slider-cat-mobile-2x.jpg") type("image/jpg") 2dppx);
+  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set(url("../img/content/slider-cat-mobile.jpg") type("image/jpg") 1dppx, url("../img/content/slider-cat-mobile-2x.jpg") type("image/jpg") 2dppx);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-@media (min-resolution: 2dppx) {
-  .top-section__background-image {
-    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/content/slider-cat-mobile-2x.jpg");
-  }
 }
 @media (width >= 1440px) {
   .top-section__background-image {
@@ -711,13 +700,9 @@ img {
     height: 100%;
     grid-column: 2;
     grid-row: 1;
-    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/content/slider-cat-desktop.jpg");
+    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), -webkit-image-set(url("../img/content/slider-cat-desktop.jpg") type("image/jpg") 1dppx, url("../img/content/slider-cat-desktop-2x.jpg") type("image/jpg") 2dppx);
+    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set(url("../img/content/slider-cat-desktop.jpg") type("image/jpg") 1dppx, url("../img/content/slider-cat-desktop-2x.jpg") type("image/jpg") 2dppx);
     background-position: left;
-  }
-}
-@media (width >= 1440px) and (min-resolution: 2dppx) {
-  .top-section__background-image {
-    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/content/slider-cat-desktop-2x.jpg");
   }
 }
 
@@ -868,7 +853,6 @@ img {
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
-  text-align: left;
   text-transform: uppercase;
   color: #000000;
 }
@@ -1363,7 +1347,6 @@ img {
   justify-content: flex-start;
   align-content: start;
   margin: 0;
-  text-align: left;
   line-height: 20px;
   color: #444444;
 }
@@ -1682,6 +1665,8 @@ img {
 }
 @media (width >= 768px) {
   .card-product--show-all {
+    margin-top: 82px;
+    border: 1px solid #f2f2f2;
     background: transparent;
   }
 }
@@ -1698,6 +1683,9 @@ img {
     grid-row: 1;
     height: 210px;
   }
+}
+.card-product__image-wrapper--show-all {
+  margin-top: -82px;
 }
 
 @media (width >= 768px) {
@@ -1738,7 +1726,6 @@ img {
   line-height: 20px;
   color: #222222;
   text-transform: uppercase;
-  text-align: left;
 }
 @media (width >= 768px) {
   .card-product__title {
@@ -1838,19 +1825,6 @@ img {
   margin: 0;
 }
 
-.card-product__background {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-rows: 90px auto;
-}
-
-.card-product__background-second {
-  border: 1px solid #f2f2f2;
-}
-
 .additional-goods {
   position: relative;
 }
@@ -1900,10 +1874,47 @@ img {
   margin-bottom: -1px;
 }
 
-@media (width >= 1440px) {
-  .additional-goods__prize {
-    align-self: stretch;
+.additional-goods__present-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 48px;
+  padding: 58px 61px 43px 58px;
+  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), -webkit-image-set(url("../img/content/present-mobile.jpg") type("image/jpg") 1dppx, url("../img/content/present-mobile-2x.jpg") type("image/jpg") 2dppx);
+  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set(url("../img/content/present-mobile.jpg") type("image/jpg") 1dppx, url("../img/content/present-mobile-2x.jpg") type("image/jpg") 2dppx);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (width >= 768px) {
+  .additional-goods__present-container {
+    grid-template-columns: repeat(2, auto);
+    gap: 264px;
+    padding: 57px 125px 60px 77px;
+    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), -webkit-image-set(url("../img/content/present-tablet.jpg") type("image/jpg") 1dppx, url("../img/content/present-tablet-2x.jpg") type("image/jpg") 2dppx);
+    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set(url("../img/content/present-tablet.jpg") type("image/jpg") 1dppx, url("../img/content/present-tablet-2x.jpg") type("image/jpg") 2dppx);
   }
+}
+@media (width >= 1440px) {
+  .additional-goods__present-container {
+    align-self: stretch;
+    grid-template-columns: 1fr;
+    gap: 46px;
+    padding: 56px 42px 43px;
+    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), -webkit-image-set(url("../img/content/present-desktop.jpg") type("image/jpg") 1dppx, url("../img/content/present-desktop-2x.jpg") type("image/jpg") 2dppx);
+    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set(url("../img/content/present-desktop.jpg") type("image/jpg") 1dppx, url("../img/content/present-desktop-2x.jpg") type("image/jpg") 2dppx);
+  }
+}
+
+.additional-goods__present-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
 }
 
 .additional-item {
@@ -1994,60 +2005,6 @@ img {
   .additional-goods__prize {
     align-self: stretch;
   }
-}
-
-.prize-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  gap: 48px;
-  padding: 58px 61px 43px 58px;
-  background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/content/gift-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-@media (min-resolution: 2dppx) {
-  .prize-container {
-    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/content/gift-mobile-2x.jpg");
-  }
-}
-@media (width >= 768px) {
-  .prize-container {
-    grid-template-columns: repeat(2, auto);
-    gap: 264px;
-    padding: 57px 125px 60px 77px;
-    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/content/gift-tablet.jpg");
-  }
-}
-@media (width >= 768px) and (min-resolution: 2dppx) {
-  .prize-container {
-    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/content/gift-tablet-2x.jpg");
-  }
-}
-@media (width >= 1440px) {
-  .prize-container {
-    grid-template-columns: 1fr;
-    gap: 46px;
-    padding: 56px 42px 43px;
-    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/content/gift-desktop.png");
-  }
-}
-@media (width >= 1440px) and (min-resolution: 2dppx) {
-  .prize-container {
-    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/content/gift-desktop-2x.jpg");
-  }
-}
-
-.prize-container__text {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: center;
-  color: #ffffff;
 }
 
 .program-choice {
@@ -2367,7 +2324,8 @@ img {
 
 .field-text__input-logo {
   position: absolute;
-  top: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 14px;
   width: 20px;
   height: 20px;
