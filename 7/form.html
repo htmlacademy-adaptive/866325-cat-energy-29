@@ -31,11 +31,9 @@
       </div>
     </div>
     <nav class="header__nav nav nav--closed nav--no-js">
-      <div class="nav__button-wrapper">
-        <button class="nav__button" type="button" aria-label="Открыть меню">
-          <span class="nav__button-icon"></span>
-        </button>
-      </div>
+      <button class="nav__button" type="button" aria-label="Открыть меню">
+        <span class="nav__button-icon"></span>
+      </button>
       <div class="nav__inner">
         <ul class="nav__list">
           <li class="nav__item">
@@ -97,7 +95,7 @@
             <div class="field-text">
               <label class="field-text__label" for="email">E-mail:*</label>
               <div class="field-text__input-wrapper">
-                <input class="field-text__input field-text__input--email" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
+                <input class="field-text__input field-text__input--with-icon" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
                 <svg class="field-text__input-logo" width="20" height="20">
                   <use xlink:href="img/sprite.svg#email"></use>
                 </svg>
@@ -106,7 +104,7 @@
             <div class="field-text">
               <label class="field-text__label" for="phone">Телефон:*</label>
               <div class="field-text__input-wrapper">
-                <input class="field-text__input field-text__input--phone" type="tel" name="phone" id="phone" value="8(960)900-60-90" required>
+                <input class="field-text__input field-text__input--with-icon" type="tel" name="phone" id="phone" value="8(960)900-60-90" required>
                 <svg class="field-text__input-logo" width="20" height="20">
                   <use xlink:href="img/sprite.svg#phone"></use>
                 </svg>
@@ -156,7 +154,6 @@
           </div>
         </div>
       </div>
-
     </form>
   </section>
   <section class="main__contacts contacts contacts--second">
@@ -182,42 +179,27 @@
 </main>
 <footer class="footer">
   <div class="footer__container container">
-    <div class="footer__item">
-      <a class="footer__logo-text" href="index.html" title="Главная">
+    <div class="footer__logo-wrapper">
+      <a class="footer__logo" href="index.html" title="Главная">
         <img src="img/icons/footer-logo.svg" width="128" height="24" alt="Логотип">
       </a>
     </div>
-    <div class="footer__item social">
+    <div class="social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank" title="Мы в Вконтакте">
-            <svg class="social__link-icon" width="28" height="22">
-              <use xlink:href="img/sprite.svg#vkontakte"></use>
-            </svg>
-          </a>
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank" title="Мы в Вконтакте"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" title="Мы в Youtube">
-            <svg class="social__link-icon" width="28" height="22">
-              <use xlink:href="img/sprite.svg#youtube"></use>
-            </svg>
-          </a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" title="Мы в Youtube"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" title="Мы в Телеграм">
-            <svg class="social__link-icon" width="28" height="22">
-              <use xlink:href="img/sprite.svg#telegram"></use>
-            </svg>
-          </a>
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" title="Мы в Телеграм"></a>
         </li>
       </ul>
     </div>
-    <div class="footer__item html-academy">
+    <div class="html-academy">
       <a class="html-academy__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" title="Онлайн‑курс HTML и CSS. Адаптивная вёрстка и автоматизация">
         <span class="html-academy__text">HTML Academy</span>
-        <svg class="html-academy__icon" width="27" height="34">
-          <use xlink:href="img/sprite.svg#html-academy"></use>
-        </svg>
       </a>
     </div>
   </div>
